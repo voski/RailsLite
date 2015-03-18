@@ -1,6 +1,7 @@
 require 'webrick'
 require 'phase5/params'
 require 'phase5/controller_base'
+require 'byebug'
 
 describe Phase5::Params do
   before(:all) do
@@ -71,6 +72,7 @@ describe Phase5::Params do
 
   context "route params" do
     it "handles route params" do
+      
       params = Phase5::Params.new(req, {"id" => 5, "user_id" => 22})
       params["id"].should == 5
       params["user_id"].should == 22
