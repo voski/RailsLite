@@ -18,8 +18,8 @@ module Phase2
     # Set the response status code and header
     def redirect_to(url)
       raise Exception.new("Response already rendered") if already_built_response?
-      @res.header["location"] = url
-      @res.status = 302
+      self.res.header["location"] = url
+      self.res.status = 302
       @already_built_response = true
     end
 

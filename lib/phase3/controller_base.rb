@@ -9,7 +9,7 @@ module Phase3
     # pass the rendered html to render_content
 
     def render(template_name)
-      # byebug
+      
       loc = "views/#{self.class.to_s.underscore}/#{template_name}.html.erb"
       f = File.read(loc)
       template = ERB.new(f)
